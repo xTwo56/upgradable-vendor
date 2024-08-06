@@ -14,4 +14,5 @@ async function main() {
   console.log("implementation contract address :" + implementationAddress)
 }
 
-main()
+main();
+
