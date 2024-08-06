@@ -17,4 +17,17 @@ contract VendorV1 is Initializable {
     require(msg.value >= 1000 wei, "You must pay 1000 wei for a soda!");
     numSodas--;
   }
+
+  function checkVersion() external view returns(string memory){
+    require(msg.sender == owner, "onlyOwnerCallable");
+    return "v1";
+  }
+
+  function getOwner() external view returns(address){
+    return owner;
+  }
+
+  function getMyAddress()external view returns(address){
+    return msg.sender;
+  }
 }
